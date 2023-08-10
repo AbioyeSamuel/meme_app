@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: 'https://meme-app-88d6182edd55.herokuapp.com/' });
+const API = axios.create({ baseURL: 'https://meme-app.azurewebsites.net' });
 
 // To enable our middleware we use interceptors
 API.interceptors.request.use((req) => {
