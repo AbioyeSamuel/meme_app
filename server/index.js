@@ -5,7 +5,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import postRoutes from "./routes/posts.js";
 import userRoutes from "./routes/user.js";
-
 import path from 'path';
 
 const app = express();
@@ -35,10 +34,9 @@ const PORT =  process.env.PORT;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-    .catch((error) => console.log(error.message));
+    .catch((error) => console.log(error.message));c
 
-// How I love to set my app PORT listening
+    // How I love to set my app PORT listening
 // app.listen(PORT, function(req, res){
 //     console.log("Server is running on PORT 5000");
 // })
-
