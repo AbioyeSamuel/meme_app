@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
 // https://www.mongodb.com/cloud/atlas to host database on cloud
 
 // Production script
+
 app.use(express.static('./client/build'));
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
@@ -34,7 +35,7 @@ const PORT =  process.env.PORT;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-    .catch((error) => console.log(error.message));c
+    .catch((error) => console.log(error.message));
 
     // How I love to set my app PORT listening
 // app.listen(PORT, function(req, res){
